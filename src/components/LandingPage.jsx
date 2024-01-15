@@ -1,15 +1,53 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import bioPic from '../assets/bio_pic.jpg';
 import rock_landscape from '../assets/rock_landscape.jpg';
 import goodFood from '../assets/eating_burrito.jpg';
-import cora from '../assets/cora_w_ball.png';
+import cora from '../assets/cora.png';
+import vzsf from '../assets/Gensler/vzsf_1.jpg';
+import newhouse from '../assets/Gensler/newhouse_1.jpg';
+import jrm from '../assets/Gensler/jrm_1.jpg';
 import running from '../assets/running.jpg';
-import '../styles/App.css';
+import resume from '../assets/Mabel_Lawrence_Resume.pdf';
 import linkedin from '../assets/linkedinLogo.png';
 import github from '../assets/githubLogo.png';
+import { gsap } from 'gsap';
+import '../styles/App.css';
 import Menu from './Menu';
 
 function App() {
+  const projectPics = [vzsf, newhouse, jrm];
+  const [projIdx, setProjIdx] = useState(0);
+  const [nextProjIdx, setNextProjIdx] = useState(1);
+
+  useEffect(() => {
+    const currentProj = document.getElementById('landing-project-img');
+    const nextProj = document.getElementById('landing-project-next-img');
+    currentProj.src = projectPics[projIdx];
+    currentProj.style.opacity = 1;
+    nextProj.src = projectPics[nextProjIdx];
+    function cb(idx) {
+      setProjIdx(idx);
+    }
+    setTimeout(() => {
+      gsap.to('#landing-project-img', {
+        opacity: 0,
+        duration: 1,
+      });
+      setTimeout(() => {
+        let newIdx;
+        if (projIdx < projectPics.length - 1) {
+          newIdx = projIdx + 1;
+        } else {
+          newIdx = 0;
+        }
+        if (newIdx < projectPics.length - 1) {
+          setNextProjIdx(newIdx + 1);
+        } else setNextProjIdx(0);
+        cb(newIdx);
+      }, 1000);
+    }, 3000);
+  }, [projIdx]);
+
   return (
     <div className="landing-page">
       <div className="banner-image">
@@ -20,7 +58,7 @@ function App() {
         <p className="img-caption">Just a nice photo I took...</p>
       </div>
       <Menu />
-      <div id="about-section">
+      <div id="about-section" className="flex-row centered-columns">
         <img
           id="bio-pic"
           src={bioPic}
@@ -44,22 +82,34 @@ function App() {
           </p>
         </div>
       </div>
-      <div id="contact-section">
-        <h4 id="contact-title">The Professional Links</h4>
-        <div id="contact-info">
-          <div id="contact-logos">
-            <a href="https://www.linkedin.com/in/mabellawrence/">
-              <img src={linkedin} alt="linkedin logo" />
-            </a>
-            <a href="https://github.com/mlawrence103">
-              <img src={github} alt="github logo" />
-            </a>
-          </div>
-          <div id="landing-email">
-            <p className="contact-title">Email: </p>
-            <a href="mabelmail3@gmail.com">mabelmail3@gmail.com</a>
+      <div id="professional-section" className="flex-row centered-columns">
+        <div id="contact-section">
+          <div id="contact-info">
+            <div id="contact-logos" className="flex-row">
+              <a href="https://www.linkedin.com/in/mabellawrence/">
+                <img src={linkedin} alt="linkedin logo" />
+              </a>
+              <a href="https://github.com/mlawrence103">
+                <img src={github} alt="github logo" />
+              </a>
+            </div>
+            <div id="landing-email">
+              <p className="contact-title">Email: </p>
+              <a href="mabelmail3@gmail.com">mabelmail3@gmail.com</a>
+            </div>
           </div>
         </div>
+        <div>
+          <a href={resume} target="blank" id="resume-link">
+            Download Resume
+          </a>
+        </div>
+      </div>
+      <div id="landing-project" className="pos-abs landing-project-pic">
+        <img id="landing-project-img" className="black-and-white" />
+      </div>
+      <div id="landing-project-next" className="landing-project-pic">
+        <img id="landing-project-next-img" className="black-and-white" />
       </div>
       <div id="happy-things-wrapper">
         <h4>Some Things That Make Me Happy</h4>
@@ -107,7 +157,7 @@ function App() {
                 I love doing things in nature - backpacking, hiking, rock
                 climbing - but living in New York City makes that a little
                 harder, so I jumped (jogged?) into the local running scene and
-                ran my first half and full marathons in 2022.
+                hope to one day run the 6 marathon majors.
               </span>
             </p>
             <img
