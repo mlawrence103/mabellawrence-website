@@ -168,6 +168,15 @@ h5 {
 #landing-project {
   z-index: 2;
 }
+.landing-proj-caption {
+  z-index: 3;
+  font-size: 0.75rem;
+  text-align: right;
+  width: 60%;
+  margin-left: 20%;
+  color: white;
+  transform: translate(-0.25rem, -2.25rem);
+}
 /*********** HAPPY LIST ************/
 
 #happy-things-wrapper {
