@@ -58,6 +58,7 @@ h5 {
 
 #menu {
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 #menu-items {
@@ -213,9 +214,71 @@ h5 {
 
 #resume {
   justify-content: center;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.resume-section-header {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.resume-section-divider {
+  border-bottom: 2px solid;
+  margin-bottom: 12px;
+  border-color: rgb(202, 96, 15);
+  width: 100%;
+}
+
+.experience-header,
+.education-header,
+.education-description-gpa,
+.project-header {
+  justify-content: space-between;
+}
+
+.resume-company,
+.resume-school,
+.resume-project {
+  font-weight: 500;
+}
+
+.company-role-divider,
+.project-link-divider {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.professional-experience,
+.education {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: '-';
+  position: absolute;
+  text-indent: -20px;
+}
+
+ul li {
+  margin-top: 0.25rem;
+}
+
+.resume-professional-achievements {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #resume-download {
+  margin-top: 20px;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: none;
