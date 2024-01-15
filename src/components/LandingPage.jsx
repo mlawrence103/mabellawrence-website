@@ -48,7 +48,6 @@ function App() {
         } else {
           nextIdx = 0;
         }
-        console.log('reset new pic');
         setProjIdx(newIdx);
         setNextProjIdx(nextIdx);
         currentProj.src = projectPics[newIdx];
@@ -121,6 +120,7 @@ function App() {
       <div id="landing-project-next" className="landing-project-pic">
         <img id="landing-project-next-img" className="black-and-white" />
       </div>
+      <p className="pos-abs landing-proj-caption">Photos courtesy of Gensler</p>
       <div id="happy-things-wrapper">
         <h4>Some Things That Make Me Happy</h4>
         <div id="happy-things-list">
