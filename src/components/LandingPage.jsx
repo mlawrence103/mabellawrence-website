@@ -18,16 +18,18 @@ function App() {
   const projectPics = [vzsf, newhouse, jrm];
   const [projIdx, setProjIdx] = useState(0);
   const [nextProjIdx, setNextProjIdx] = useState(1);
+  const [initRender, setInitRender] = useState(false);
 
   useEffect(() => {
     const currentProj = document.getElementById('landing-project-img');
     const nextProj = document.getElementById('landing-project-next-img');
     currentProj.src = projectPics[projIdx];
-    currentProj.style.opacity = 1;
     nextProj.src = projectPics[nextProjIdx];
-    function cb(idx) {
-      setProjIdx(idx);
-    }
+  }, []);
+
+  useEffect(() => {
+    const currentProj = document.getElementById('landing-project-img');
+    const nextProj = document.getElementById('landing-project-next-img');
     setTimeout(() => {
       gsap.to('#landing-project-img', {
         opacity: 0,
@@ -35,16 +37,24 @@ function App() {
       });
       setTimeout(() => {
         let newIdx;
+        let nextIdx;
         if (projIdx < projectPics.length - 1) {
           newIdx = projIdx + 1;
         } else {
           newIdx = 0;
         }
         if (newIdx < projectPics.length - 1) {
-          setNextProjIdx(newIdx + 1);
-        } else setNextProjIdx(0);
-        cb(newIdx);
-      }, 1000);
+          nextIdx = newIdx + 1;
+        } else {
+          nextIdx = 0;
+        }
+        console.log('reset new pic');
+        setProjIdx(newIdx);
+        setNextProjIdx(nextIdx);
+        currentProj.src = projectPics[newIdx];
+        currentProj.style.opacity = 1;
+        nextProj.src = projectPics[nextIdx];
+      }, 1100);
     }, 3000);
   }, [projIdx]);
 
