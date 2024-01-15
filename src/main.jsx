@@ -4,7 +4,7 @@ import App from './components/LandingPage';
 import Routes from './components/AppRoutes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Routes />
+  // </React.StrictMode>
 );
