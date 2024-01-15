@@ -37,6 +37,23 @@ h5 {
   filter: grayscale(100%);
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.centered-columns {
+  width: 60%;
+  margin-left: 20%;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
 /*********** MENU ************/
 
 #menu {
@@ -75,29 +92,22 @@ h5 {
   object-position: center;
 }
 
+/*********** PROFESSIONAL SECTION ************/
+#professional-section {
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /*********** CONTACT INFO ************/
-
-#contact-section {
-  width: 50%;
-  margin-left: 25%;
-  border-radius: 20px;
-  /* border: 1px solid rgb(0, 0, 0, 0.25); */
-  background-color: rgb(247, 234, 223, 0.5);
-  padding: 15px;
-  margin-top: 50px;
-}
-
-#contact-title {
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
 
 #contact-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 45%;
+  max-width: 500px;
 }
 
 #contact-logos img {
@@ -116,29 +126,47 @@ h5 {
   margin-right: 10px;
 }
 
+/*********** RESUME LINK ************/
+#resume-link {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(228, 119, 45, 0.5);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
 /*********** ABOUT ME ************/
 
 #about-section {
-  padding-left: 5%;
-  padding-right: 5%;
   margin-top: 50px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 #bio-pic {
-  width: 30%;
+  width: 45%;
   max-width: 500px;
-  margin-right: 50px;
 }
 
 #about-text {
-  width: 30%;
+  width: 100%;
   text-align: justify;
 }
 
+/*********** LANDING IMAGE ************/
+.landing-project-pic {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.landing-project-pic img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+#landing-project {
+  z-index: 2;
+}
 /*********** HAPPY LIST ************/
 
 #happy-things-wrapper {

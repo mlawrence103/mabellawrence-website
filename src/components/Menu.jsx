@@ -9,7 +9,7 @@ const Menu = () => {
         </Link>
         {/* <p className="menu-link">Projects</p> */}
         <Link to="/resume" className="menu-link">
-          Resume
+          Projects
         </Link>
       </div>
     </div>
