@@ -7,8 +7,10 @@ import amr from '../assets/amr_cover.png';
 import mitw from '../assets/mitw.png';
 import tnw from '../assets/tnw_cover.png';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const projectsSections = document.getElementsByClassName(
       'project-gallery-section'
@@ -36,7 +38,11 @@ const Projects = () => {
       </div>
       <Menu />
       <div id="projects-overview-gallery">
-        <div className="flex-row project-gallery-section" id="vz-section">
+        <div
+          className="flex-row project-gallery-section"
+          id="vz-section"
+          onClick={() => navigate('/projects/verizon')}
+        >
           <div className="project-gallery-title pos-abs" id="vz-section-title">
             Verizon Innovation Center
           </div>
