@@ -47,12 +47,21 @@ const Projects = () => {
             Verizon Innovation Center
           </div>
           <img className="project-cover" src={vzsf} />
+          <p
+            className="pos-abs project-page-credit"
+            style={{ color: '#ffffff' }}
+          >
+            Photo courtesy of Gensler
+          </p>
         </div>
         <div className="flex-row project-gallery-section" id="jrm-section">
           <div className="project-gallery-title pos-abs" id="jrm-section-title">
             Jackie Robinson Museum
           </div>
           <img className="project-cover" src={jrm} />
+          <p className="pos-abs project-page-credit" style={{ color: 'black' }}>
+            Photo courtesy of Gensler
+          </p>
         </div>
         <div className="flex-row project-gallery-section" id="newhouse-section">
           <div
@@ -62,6 +71,18 @@ const Projects = () => {
             Newhouse School of Communications
           </div>
           <img className="project-cover" src={newhouse} />
+          <p className="pos-abs project-page-credit">
+            <div
+              style={{
+                color: 'black',
+                backgroundColor: 'white',
+                width: 'fit-content',
+                paddingRight: '.5rem',
+              }}
+            >
+              Photo courtesy of Gensler
+            </div>
+          </p>
         </div>
         <div className="flex-row project-gallery-section" id="tnw-section">
           <div className="project-gallery-title pos-abs" id="tnw-section-title">
