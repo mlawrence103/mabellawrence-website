@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutMe from './LandingPage';
 import Projects from './Projects';
 import NotFound from './NotFound.jsx';
+import Verizon from './Verizon';
 
 const AppRoutes = () => {
   const exampleProps = { arr: [], obj: {}, str: 'Hello World' };
@@ -11,6 +12,7 @@ const AppRoutes = () => {
       <Routes>
         <Route exact path="/" element={<AboutMe />} />
         <Route exact path="/projects" element={<Projects />} />
+        <Route exact path="/projects/verizon" element={<Verizon />} />
         <Route path="*" element={<AboutMe />} />
       </Routes>
     </Router>
