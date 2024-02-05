@@ -15,7 +15,7 @@ const VerizonPage = (props) => {
       </div>
       <Menu />
       <div className="project-page">
-        <div className="flex-row">
+        <div className="project-page-section">
           <div className="image-grid">
             <div id="vz-img-1" className="grid-el">
               <img src={vzsf_4} id="vz-img-1" />
@@ -32,7 +32,7 @@ const VerizonPage = (props) => {
           </div>
           <div className="project-info">
             <div className="project-name">VERIZON INNOVATION CENTER</div>
-            <div className="project-tech-stack">
+            <div className="project-tech-stack flex-row">
               <div className="tech-name">Python</div>
               <div className="tech-name">OpenCV</div>
               <div className="tech-name">NumPy</div>
