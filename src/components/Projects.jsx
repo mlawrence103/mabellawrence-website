@@ -54,7 +54,11 @@ const Projects = () => {
             Photo courtesy of Gensler
           </p>
         </div>
-        <div className="flex-row project-gallery-section" id="jrm-section">
+        <div
+          className="flex-row project-gallery-section"
+          id="jrm-section"
+          onClick={() => navigate('/projects/jrm')}
+        >
           <div className="project-gallery-title pos-abs" id="jrm-section-title">
             Jackie Robinson Museum
           </div>
