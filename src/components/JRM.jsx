@@ -1,7 +1,6 @@
 import Menu from './Menu';
 import { useState, useEffect } from 'react';
 import jrm_1 from '../assets/Gensler/jrm_1.jpg';
-import jrm_2 from '../assets/Gensler/jrm_2.jpg';
 import jrm_3 from '../assets/Gensler/jrm_3.jpg';
 import jrm_4 from '../assets/Gensler/jrm_4.jpg';
 import jrm_5 from '../assets/Gensler/jrm_5.jpg';
