@@ -19,12 +19,16 @@ const Projects = () => {
       const el = projectsSections[i];
       const id = el.id;
       const elTitle = document.getElementById(`${id}-title`);
-      el.addEventListener('mouseover', (e) => {
+      if (matchMedia('(pointer:fine)').matches) {
+        el.addEventListener('mouseover', (e) => {
+          elTitle.style.opacity = 1;
+        });
+        el.addEventListener('mouseout', (e) => {
+          elTitle.style.opacity = 0;
+        });
+      } else {
         elTitle.style.opacity = 1;
-      });
-      el.addEventListener('mouseout', (e) => {
-        elTitle.style.opacity = 0;
-      });
+      }
     }
   }, []);
 
@@ -37,7 +41,7 @@ const Projects = () => {
         ></img>
       </div>
       <Menu />
-      <div id="projects-overview-gallery">
+      <div id="projects-overview-gallery" className="centered-columns">
         <div
           className="flex-row project-gallery-section"
           id="vz-section"
