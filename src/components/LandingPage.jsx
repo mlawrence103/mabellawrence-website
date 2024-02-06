@@ -67,7 +67,7 @@ function App() {
         <p className="img-caption">Just a nice photo I took...</p>
       </div>
       <Menu />
-      <div id="about-section" className="flex-row centered-columns">
+      <div id="about-section" className="centered-columns">
         <img
           id="bio-pic"
           src={bioPic}
@@ -91,7 +91,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div id="professional-section" className="flex-row centered-columns">
+      <div id="professional-section" className="centered-columns">
         <div id="contact-section">
           <div id="contact-info">
             <div id="contact-logos" className="flex-row">

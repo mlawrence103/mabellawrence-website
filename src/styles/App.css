@@ -105,6 +105,8 @@ h5 {
 
 /*********** PROFESSIONAL SECTION ************/
 #professional-section {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -151,6 +153,7 @@ h5 {
 #about-section {
   margin-top: 50px;
   display: flex;
+  flex-direction: row;
 }
 
 #bio-pic {
@@ -230,10 +233,6 @@ h5 {
 }
 
 /***** Projects *****/
-#projects-overview-gallery {
-  width: 60%;
-  margin-left: 20%;
-}
 
 .project-cover {
   height: 15rem;
@@ -419,6 +418,44 @@ h5 {
 /***** MOBILE STYLING *****/
 
 @media only screen and (max-width: 1300px) {
+  .centered-columns {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #about-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing-project-pic {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #happy-things-list {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    width: 80%;
+  }
+
+  .happy-thing {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .things-i-like-description {
+    min-height: 0px;
+  }
+
+  .happy-thing img {
+    border-radius: 50%;
+    width: 50%;
+    margin-top: 1rem;
+  }
+
   .project-page-section {
     display: flex;
     flex-direction: column;
@@ -434,11 +471,44 @@ h5 {
   .project-tech-stack {
     width: 100%;
   }
+
+  .project-page-credit {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
+  .centered-columns {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #bio-pic {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  #professional-section {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #contact-info {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
   .banner-image img {
     height: 10rem;
+  }
+
+  .landing-project-pic {
+    width: 90%;
+    margin-left: 5%;
   }
 
   .project-page {
@@ -457,5 +527,28 @@ h5 {
 
   .tech-name {
     width: 40%;
+  }
+
+  .project-cover {
+    height: 10rem;
+  }
+
+  .project-gallery-title {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-top: 8rem;
+  }
+
+  .project-page-credit {
+    margin-top: 8.75rem;
+    width: 90%;
+    margin-left: 5%;
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .project-cover {
+    filter: grayscale(0);
   }
 }
