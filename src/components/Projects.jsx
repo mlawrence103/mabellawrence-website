@@ -71,7 +71,11 @@ const Projects = () => {
             Photo courtesy of Gensler
           </p>
         </div>
-        <div className="flex-row project-gallery-section" id="newhouse-section">
+        <div
+          className="flex-row project-gallery-section"
+          id="newhouse-section"
+          onClick={() => navigate('/projects/newhouse')}
+        >
           <div
             className="project-gallery-title pos-abs"
             id="newhouse-section-title"

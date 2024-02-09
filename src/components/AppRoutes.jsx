@@ -5,6 +5,7 @@ import Projects from './Projects';
 import NotFound from './NotFound.jsx';
 import Verizon from './Verizon';
 import JRM from './JRM';
+import Newhouse from './Newhouse';
 
 const AppRoutes = () => {
   const exampleProps = { arr: [], obj: {}, str: 'Hello World' };
@@ -15,6 +16,7 @@ const AppRoutes = () => {
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/projects/verizon" element={<Verizon />} />
         <Route exact path="/projects/jrm" element={<JRM />} />
+        <Route exact path="/projects/newhouse" element={<Newhouse />} />
         <Route path="*" element={<AboutMe />} />
       </Routes>
     </Router>

@@ -77,8 +77,8 @@ function App() {
           <h3 className="about-subtitle">Hi, I'm Mabel</h3>
           <p>
             <span className="sentence">
-              I am a software engineer working to create interesting and
-              accessible solutions for modern audiences.
+              I am a software engineer working to create thoughtful and
+              intuitive solutions for modern audiences.
             </span>
             <span className="sentence">
               My background is in mechanical engineering and theatrical design.
@@ -87,6 +87,12 @@ function App() {
               As a creative technologist, I enjoy problem solving everything
               from how to optimize code for an application to how to construct
               an interactive prototype for a museum.
+            </span>
+            <span className="sentence">
+              I am interested in the interaction between technology and design
+              and have had the opportunity to explore this intersection working
+              across industries including theater, retail, museums, and
+              universities.
             </span>
           </p>
         </div>
