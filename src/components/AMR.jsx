@@ -22,12 +22,13 @@ const AMR = (props) => {
           </div>
           <div className="project-description">
             This was an educational project exploring autonomous robotics
-            principles in sensing, localization, mapping and planning with the
+            principles in sensing, localization, mapping, and planning with the
             goal of navigating a virtual robot through a map with both known and
-            unknown walls to find waypoints. The code was written in a group of
-            three students for the Autonomous Mobile Robots course at Cornell
-            University in 2019.
+            unknown walls to find waypoints.
             <div className="paragraph-break"></div>
+            The report below was an evaluation of the final [3-person] group
+            project performance for the Autonomous Mobile Robots course at
+            Cornell University in 2019.
           </div>
         </div>
         <div id="amr-map">
@@ -35,6 +36,11 @@ const AMR = (props) => {
         </div>
         <div id="amr-report">
           <iframe src={amr_report} />
+        </div>
+        <div id="amr-report-download">
+          <a href={amr_report} target="blank" id="amr-report-link">
+            See Final Report
+          </a>
         </div>
       </div>
     </div>

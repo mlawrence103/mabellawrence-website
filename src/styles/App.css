@@ -149,7 +149,8 @@ h5 {
 }
 
 /*********** RESUME LINK ************/
-#resume-link {
+#resume-link,
+#amr-report-link {
   text-decoration: none;
   color: black;
   background-color: #e4772d80;
@@ -608,6 +609,10 @@ h5 {
   min-height: 600px;
 }
 
+#amr-report-download {
+  display: none;
+}
+
 #tnw-logo,
 #mitw-screenshot,
 #amr-screenshot {
@@ -693,6 +698,17 @@ h5 {
   #amr-map img {
     width: 70%;
     margin-left: 15%;
+  }
+
+  #amr-report {
+    display: none;
+  }
+
+  #amr-report-download {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
   }
 }
 
