@@ -81,12 +81,11 @@ function App() {
               intuitive solutions for modern audiences.
             </span>
             <span className="sentence">
-              My background is in mechanical engineering and theatrical design.
-            </span>
-            <span className="sentence">
-              As a creative technologist, I enjoy problem solving everything
-              from how to optimize code for an application to how to construct
-              an interactive prototype for a museum.
+              As a creative technologist with a brackground in software
+              development, mechanical engineering, and set design, I enjoy
+              problem solving everything from how to optimize code for an
+              application to how to construct an interactive prototype for a
+              museum.
             </span>
             <span className="sentence">
               I am interested in the interaction between technology and design
