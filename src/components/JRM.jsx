@@ -12,7 +12,10 @@ const JRMPage = (props) => {
   return (
     <div>
       <div className="banner-image black-and-white">
-        <img src={jrm_1} alt="Original picture of rocky landscape"></img>
+        <img
+          src={jrm_1}
+          alt="picture of jackie robinson museum game day exhibit"
+        ></img>
       </div>
       <Menu />
       <div className="project-page">

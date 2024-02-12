@@ -11,7 +11,7 @@ const VerizonPage = (props) => {
   return (
     <div>
       <div className="banner-image black-and-white">
-        <img src={vzsf_1} alt="Original picture of rocky landscape"></img>
+        <img src={vzsf_1} alt="Picture of verizon bridge installation"></img>
       </div>
       <Menu />
       <div className="project-page">

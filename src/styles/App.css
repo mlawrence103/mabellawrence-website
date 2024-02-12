@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 body {
   margin: 0;
   padding-bottom: 50px;
@@ -96,12 +98,18 @@ h5 {
   color: white;
 }
 
-.banner-image img {
+.banner-image img,
+.text-banner {
   width: 100%;
-  height: 400px;
+  height: 300px;
   margin-bottom: 2rem;
   object-fit: cover;
   object-position: center;
+}
+
+.text-banner img {
+  max-height: 200px;
+  object-fit: contain;
 }
 
 /*********** PROFESSIONAL SECTION ************/
@@ -472,6 +480,64 @@ h5 {
   width: 300px;
 }
 
+#tnw-section {
+  background-color: #d6eadf;
+  filter: grayscale(1);
+}
+
+#tnw-section .project-cover {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#tnw-section:hover {
+  filter: grayscale(0);
+}
+
+#tnw-cover-text {
+  font-size: 1.5rem;
+  width: 50%;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.taste-not-waste-font {
+  font-family: 'Kalam';
+}
+
+#tnw-logo {
+  max-height: 11rem;
+}
+
+#tnw-banner {
+  background-color: #d6eadf;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+#tnw-source {
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  line-height: 2rem;
+}
+
+#tnw-banner-text {
+  width: 40%;
+  margin-left: 4%;
+  font-size: 2rem;
+}
+
+#tnw-banner img {
+  width: 50%;
+}
+
+#tnw_recording img {
+  width: 30%;
+  margin-left: 35%;
+}
+
 /***** 404 Page *****/
 #not-found {
   width: 30%;
@@ -525,6 +591,10 @@ h5 {
     align-items: center;
   }
 
+  #tnw-section {
+    filter: grayscale(0);
+  }
+
   .project-description {
     max-width: 600px;
     margin-bottom: 1rem;
@@ -541,6 +611,11 @@ h5 {
 
   .project-name {
     margin-top: 1rem;
+  }
+
+  #tnw_recording img {
+    width: 50%;
+    margin-left: 25%;
   }
 }
 
@@ -579,6 +654,14 @@ h5 {
   .landing-project-pic {
     width: 90%;
     margin-left: 5%;
+  }
+
+  #tnw-cover-text {
+    font-size: 1.25rem;
+  }
+
+  #tnw-logo {
+    max-height: 8rem;
   }
 
   .project-page {
@@ -631,6 +714,19 @@ h5 {
     grid-template-rows: repeat(4, 24%);
     grid-template-columns: repeat(4, 24%);
     grid-gap: 1%;
+  }
+
+  #tnw-banner-text {
+    font-size: 1.25em;
+  }
+
+  #tnw-page .project-info {
+    margin-left: 10% !important;
+  }
+
+  #tnw_recording img {
+    width: 80%;
+    margin-left: 10%;
   }
 }
 
