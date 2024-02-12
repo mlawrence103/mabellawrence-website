@@ -14,7 +14,10 @@ const NewhousePage = (props) => {
   return (
     <div>
       <div className="banner-image black-and-white">
-        <img src={newhouse_1} alt="Original picture of rocky landscape"></img>
+        <img
+          src={newhouse_1}
+          alt="picture of newhouse school of communications"
+        ></img>
       </div>
       <Menu />
       <div className="project-page">

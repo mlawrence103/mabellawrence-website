@@ -5,7 +5,7 @@ import newhouse from '../assets/Gensler/newhouse_2.jpg';
 import vzsf from '../assets/Gensler/vzsf_1.jpg';
 import amr from '../assets/amr_cover.png';
 import mitw from '../assets/mitw.png';
-import tnw from '../assets/tnw_cover.png';
+import tnw_icon from '../assets/tnw_icon.png';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -96,11 +96,20 @@ const Projects = () => {
             </div>
           </p>
         </div>
-        <div className="flex-row project-gallery-section" id="tnw-section">
+        <div
+          className="flex-row project-gallery-section"
+          id="tnw-section"
+          onClick={() => navigate('/projects/taste-not-waste')}
+        >
           <div className="project-gallery-title pos-abs" id="tnw-section-title">
             Taste Not Waste: Mobile App
           </div>
-          <img className="project-cover" src={tnw} />
+          <div className="project-cover flex-row">
+            <div className="taste-not-waste-font flex-col" id="tnw-cover-text">
+              A mobile app to help you reduce your food waste
+            </div>
+            <img id="tnw-logo" src={tnw_icon} />
+          </div>
         </div>
         <div className="flex-row project-gallery-section" id="mitw-section">
           <div
