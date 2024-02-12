@@ -19,15 +19,17 @@ const Projects = () => {
       const el = projectsSections[i];
       const id = el.id;
       const elTitle = document.getElementById(`${id}-title`);
-      if (matchMedia('(pointer:fine)').matches) {
-        el.addEventListener('mouseover', (e) => {
+      if (elTitle) {
+        if (matchMedia('(pointer:fine)').matches) {
+          el.addEventListener('mouseover', (e) => {
+            elTitle.style.opacity = 1;
+          });
+          el.addEventListener('mouseout', (e) => {
+            elTitle.style.opacity = 0;
+          });
+        } else {
           elTitle.style.opacity = 1;
-        });
-        el.addEventListener('mouseout', (e) => {
-          elTitle.style.opacity = 0;
-        });
-      } else {
-        elTitle.style.opacity = 1;
+        }
       }
     }
   }, []);
@@ -61,7 +63,7 @@ const Projects = () => {
         <div
           className="flex-row project-gallery-section"
           id="jrm-section"
-          onClick={() => navigate('/projects/jrm')}
+          onClick={() => navigate('/projects/jackie-robinson-museum')}
         >
           <div className="project-gallery-title pos-abs" id="jrm-section-title">
             Jackie Robinson Museum
@@ -83,7 +85,7 @@ const Projects = () => {
             Newhouse School of Communications
           </div>
           <img className="project-cover" src={newhouse} />
-          <p className="pos-abs project-page-credit">
+          <div className="pos-abs project-page-credit">
             <div
               style={{
                 color: 'black',
@@ -94,10 +96,10 @@ const Projects = () => {
             >
               Photo courtesy of Gensler
             </div>
-          </p>
+          </div>
         </div>
         <div
-          className="flex-row project-gallery-section"
+          className="flex-row project-gallery-section project-gallery-no-image"
           id="tnw-section"
           onClick={() => navigate('/projects/taste-not-waste')}
         >
@@ -105,26 +107,49 @@ const Projects = () => {
             Taste Not Waste: Mobile App
           </div>
           <div className="project-cover flex-row">
-            <div className="taste-not-waste-font flex-col" id="tnw-cover-text">
+            <div className="taste-not-waste-font flex-col no-image-cover-text">
               A mobile app to help you reduce your food waste
             </div>
             <img id="tnw-logo" src={tnw_icon} />
           </div>
         </div>
-        <div className="flex-row project-gallery-section" id="mitw-section">
+        <div
+          className="flex-row project-gallery-section project-gallery-no-image"
+          id="mitw-section"
+          onClick={() => navigate('/projects/meet-in-the-middle')}
+        >
           <div
             className="project-gallery-title pos-abs"
             id="mitw-section-title"
           >
             Meet in the Middle: Web App Exploration
           </div>
-          <img className="project-cover" src={mitw} />
-        </div>
-        <div className="flex-row project-gallery-section" id="amr-section">
-          <div className="project-gallery-title pos-abs" id="amr-section-title">
-            Authonomous Mobile Robot: Educational Project
+          <div className="project-cover flex-row">
+            <div className="flex-col no-image-cover-text" id="mitw-cover-text">
+              A an activity finder that reduces travel time
+            </div>
+            <img id="mitw-screenshot" src={mitw} />
           </div>
-          <img className="project-cover" src={amr} />
+        </div>
+
+        <div
+          className="flex-row project-gallery-section project-gallery-no-image"
+          id="amr-section"
+          onClick={() => navigate('/projects/autonomous-mobile-robots')}
+        >
+          <div
+            className="project-gallery-title pos-abs"
+            id="mitw-section-title"
+          >
+            Autonomous Mobile Robot: Educational Project
+          </div>
+          <div className="project-cover flex-row">
+            <div className="flex-col no-image-cover-text" id="amr-cover-text">
+              A course on autonmous robot sensing, localization, mapping, motion
+              and path planning, obstacle and collision avoidance.
+            </div>
+            <img id="amr-screenshot" src={amr} />
+          </div>
         </div>
       </div>
     </div>

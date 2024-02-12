@@ -1,11 +1,11 @@
 import Menu from './Menu';
 import { useState, useEffect } from 'react';
 import tnw_icon from '../assets/tnw_icon.png';
-import tnw_recording from '../assets/tnw_recording.gif';
+import tnw_recording from '../assets/tnw_scan_recording.gif';
 
 const TasteNotWaste = (props) => {
   return (
-    <div id="tnw-page">
+    <div id="tnw-page" className="no-grid-project-page">
       <div className="banner-image black-and-white">
         <div
           className="text-banner flex-row taste-not-waste-font"
