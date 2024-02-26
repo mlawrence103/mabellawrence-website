@@ -137,10 +137,7 @@ const Projects = () => {
           id="amr-section"
           onClick={() => navigate('/projects/autonomous-mobile-robots')}
         >
-          <div
-            className="project-gallery-title pos-abs"
-            id="mitw-section-title"
-          >
+          <div className="project-gallery-title pos-abs" id="amr-section-title">
             Autonomous Mobile Robot: Educational Project
           </div>
           <div className="project-cover flex-row">
